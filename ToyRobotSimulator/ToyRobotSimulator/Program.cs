@@ -2,6 +2,7 @@
 {
     using System;
     using Commands;
+    using Models;
 
     public class Program
     {

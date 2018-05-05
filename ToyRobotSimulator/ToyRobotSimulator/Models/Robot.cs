@@ -1,7 +1,6 @@
-﻿namespace ToyRobotSimulator.Console
+﻿namespace ToyRobotSimulator.Console.Models
 {
     using Interfaces;
-    using Models;
 
     public class Robot : IRobot
     {
