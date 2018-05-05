@@ -147,6 +147,22 @@
             Assert.AreEqual(objectPosition, null);
         }
 
+        [Test]
+        public void HelpTest_AlwaysReturn_Null()
+        {
+            var objectPosition = _robotActionProcessor.Process(new ReportCommand());
+
+            Assert.AreEqual(objectPosition, null);
+        }
+
+        [Test]
+        public void InvalidTest_AlwaysReturn_Null()
+        {
+            var objectPosition = _robotActionProcessor.Process(new ReportCommand());
+
+            Assert.AreEqual(objectPosition, null);
+        }
+
         [TestCase(Facing.East, 1, 2, Facing.North, 3, 3)]
         [TestCase(Facing.West, 0, 0, Facing.South, 0, 0)]
         [TestCase(Facing.North, 0, 0, Facing.West, 0, 2)]
