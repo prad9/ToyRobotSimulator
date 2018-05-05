@@ -16,7 +16,6 @@
             Console.WriteLine("LEFT -- Rotates robot 90 degress without changing position of the robot");
             Console.WriteLine("RIGHT -- Rotates robot 90 degress without changing position of the robot");
             Console.WriteLine("REPORT -- Will announce the current position of the robot");
-            Console.WriteLine("EXIT -- Will exit the application");
             Console.WriteLine("HELP -- Will print out all the valid commands");
             Console.WriteLine("----------------------");
             return null;
