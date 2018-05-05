@@ -1,0 +1,13 @@
+language: csharp
+solution: ToyRobotSimulator.sln
+install:
+  - sudo apt-get install nunit-console
+  - nuget restore ./ToyRobotSimulator/ToyRobotSimulator.sln
+  - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
+  - nuget install NUnit.Console -Version 3.8.0 -OutputDirectory testrunner
+script:
+  - xbuild ./ToyRobotSimulator/ToyRobotSimulator.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./ToyRobotSimulator/ToyRobotSimulator.UnitTests/bin/Debug/ToyRobotSimulator.UnitTests.dll
+after_script:
+  - make coverage
+  - bash <(curl -s https://codecov.io/bash)
